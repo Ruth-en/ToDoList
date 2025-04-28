@@ -1,0 +1,9 @@
+.containerBacklog{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerBacklog_view{
+    background-color: aqua;
+
+}

@@ -1,0 +1,79 @@
+.ContainerItemTarea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem;
+    background-color: rgba(206, 205, 170, 0.35);
+    border-radius: 0.2rem;
+    margin: 0.4rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.itemTareaPrincipal{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Botones enviar al backlog y cambiar estado*/
+.sprintSpace{
+    height: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sendBacklog{
+    height: 100%;
+    width: 45%;
+    color: white;
+    background-color: rgba(202, 131, 50, 0.5);
+}
+
+.sendBacklog:hover{
+    background-color: rgba(202, 131, 50, 0.8);
+}
+
+.changeState {
+    height: 100%;
+    width: 45%;
+    color: white;
+    background-color: rgba(58, 58, 58, 0.3);
+}
+
+.changeState:hover{
+    background-color: rgba(58, 58, 58, 0.5);
+}
+
+/*Boton que aparece si estane n el backlog*/
+.buttonsAndSelect{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;  
+}
+.buttonsAndSelect button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+}
+
+.sendSprint{
+    display: flex;
+
+}
+.sendSprint select{
+    padding: 0.2rem;
+    border-color: #85C86D;
+    color: #85C86D;
+}
+.sendSprint button{
+    width: 5vw;
+    height: 4vh;
+    border-radius: 0%;
+    background-color: #85C86D;
+    color: white;
+}

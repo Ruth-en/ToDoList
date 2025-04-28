@@ -1,0 +1,34 @@
+{
+  "backlogTareas": [
+    {
+      "id": "2025-04-07T23:55:21.275Z",
+      "titulo": "Tarea 4",
+      "descripcion": "sxze5trtuycfvyt",
+      "fechaLimite": "2025-05-01",
+      "estado": "pendiente"
+    }
+  ],
+  "sprintList": [
+    {
+      "id": "2025-04-16T02:27:52.330Z",
+      "nombre": "Sprint 2",
+      "fechaInicio": "2025-04-19",
+      "fechaCierre": "2025-05-11",
+      "tareas": []
+    },
+    {
+      "id": "2025-04-16T02:30:07.703Z",
+      "nombre": "Sprint 6",
+      "fechaInicio": "2025-05-20",
+      "fechaCierre": "2025-06-04",
+      "tareas": []
+    },
+    {
+      "id": "2025-04-16T12:33:42.605Z",
+      "nombre": "Sprint 5",
+      "fechaInicio": "2025-04-27",
+      "fechaCierre": "2025-08-29",
+      "tareas": []
+    }
+  ]
+}

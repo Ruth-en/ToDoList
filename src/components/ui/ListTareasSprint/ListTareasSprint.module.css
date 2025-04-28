@@ -1,0 +1,36 @@
+.sectionSprint{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+}
+
+.sprintHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.sprintAddTarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(202, 131, 50, 0.5) ;
+    border: none;
+    width: 10vw;
+    height:5vh;
+    border-radius: 10px;
+    color: white;
+    font-size:1rem;
+    gap:0.3rem
+}
+.sprintAddTarea:hover{
+    background-color: rgba(202, 131, 50);
+    cursor: pointer; 
+}
+
+.sprintTablero{
+    display: flex;
+    gap: 1rem; 
+}
+
