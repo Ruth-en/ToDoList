@@ -3,7 +3,8 @@
     flex-wrap: wrap;
 }
 
-.containerBacklog_view{
-    background-color: aqua;
-
+.containerMain{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
 }

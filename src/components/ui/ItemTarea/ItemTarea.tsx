@@ -119,9 +119,9 @@ export const ItemTarea: FC<ItemTarea> = ({
     return (
         <div className={style.ContainerItemTarea}>
             <div className={style.itemTareaPrincipal}>
-                <div>
+                <div className={style.itemTareaInfo}>
                     <h4>{tarea.titulo}</h4>
-                    <p>Fecha límite:{tarea.fechaLimite}</p>
+                    <p>FL:{tarea.fechaLimite}</p>
                 </div>
 
                 <div className={style.buttonsAndSelect}>
@@ -140,6 +140,8 @@ export const ItemTarea: FC<ItemTarea> = ({
                         </div>
 
                     )}
+                </div>
+                <div className={style.buttonsViewEditDelete}>
                     <button onClick={() => handleOpenModalVer(tarea)} style={{ backgroundColor: "#6BB0FF", color: "white" }}><IoEyeSharp /></button>
                     <button onClick={() => handleOpenModalEdit(tarea)} style={{ backgroundColor: "#85C86D", color: "white" }}><FaPen /></button>
                     <button onClick={() => handleEliminarTarea(tarea)} style={{ backgroundColor: "#FF6B6B", color: "white" }}><FaTrashAlt /></button>

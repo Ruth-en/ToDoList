@@ -32,8 +32,7 @@ export const ListTareasBacklog = () => {
     const handleCloseModalA = () => { setOpenModalAdd(false) };
 
     return (
-        <section>
-            <div className={styles.containerPrincipal}>
+        <section className={styles.containerPrincipal}>
                 <div className={styles.containerTitleAddTarea}>
                     <h2>Tareas del Backlog</h2>
                     <button onClick={handleCreateTareaBacklog}>Crear tarea <MdOutlinePlaylistAdd /></button>
@@ -50,7 +49,6 @@ export const ListTareasBacklog = () => {
                         <h3>No hay tareas</h3>
                     )}
                 </div>
-            </div>
             {openModalAdd && <ModalEditarAñadir type="tarea" editData={selectedTarea} handleCloseModal={handleCloseModalA}/>}
         </section>
     )

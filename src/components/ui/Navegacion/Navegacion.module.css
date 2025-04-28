@@ -1,12 +1,13 @@
 .containerNav{
     width: 15vw ;
+    min-width: 200px;
     display: flex;
-    height: 85vh;
+    height: 88vh;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px ;
+    
     gap: 20px;
-    border-right:  solid 3px #CEC1AA;
+    border-right:  solid 2px #CEC1AA;
 }
 
 .buttonBacklog{
@@ -19,6 +20,7 @@
     justify-content: center;
     align-items: center; 
     gap: 10px;
+    margin-top: 20px;
 }
 
 .buttonBacklog:hover ,

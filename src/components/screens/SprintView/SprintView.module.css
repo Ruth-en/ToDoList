@@ -2,3 +2,8 @@
     display: flex;
     flex-wrap: wrap;
 }
+.containerMain{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}

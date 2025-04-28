@@ -1,18 +1,15 @@
 .containerPrincipal{
     display: flex;
     flex-direction: column;
-    width: 80vw;
-
-    margin-top: 1rem;
     gap: 1rem;
-    padding-left: 0.5rem;
+    width: 85vw;
 }
+
 .containerTitleAddTarea{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.containerTitleAddTarea{
+    margin: 1rem;
     font-size: 0.8rem;
 
 }
@@ -32,4 +29,10 @@
 .containerTitleAddTarea button:hover{
     background-color: rgba(202, 131, 50);
     cursor: pointer; 
+}
+
+.containerTareas{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }

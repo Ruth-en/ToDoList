@@ -1,14 +1,16 @@
 .sectionSprint{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    
+    gap: 1rem;
+    width: 85vw;
 }
 
 .sprintHeader{
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    align-items: center;
+    margin: 1rem;
+    font-size: 0.8rem;
 }
 
 .sprintAddTarea{
@@ -32,5 +34,7 @@
 .sprintTablero{
     display: flex;
     gap: 1rem; 
+    padding: 0 1rem;
+    height: 70vh;
 }
 

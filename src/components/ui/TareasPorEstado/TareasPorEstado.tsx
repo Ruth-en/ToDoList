@@ -8,6 +8,7 @@ interface Estado {
     sprint: ISprint;
     estadoTarea: "pendiente" | "en_progreso" | "completada";
     tareas: ITarea[];
+    
 }
 
 const titulo = {

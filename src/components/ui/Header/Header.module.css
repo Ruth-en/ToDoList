@@ -1,8 +1,8 @@
 .containerHeader{
     background-color: #CEC1AA;
     width: 100vw;
-    height: 10vh;
-    min-height: 73px;
+    height: 12vh;
+    min-height: 70px;
     display: flex;
     align-items: center;
     padding: 0 20px 0;
