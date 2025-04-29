@@ -21,18 +21,18 @@ Este proyecto es una aplicación web de **Administrador de Tareas** (ToDoList) d
 
 ## Estructura del proyecto
 
-├── src/
-│   ├── assets/         # Contiene imágenes y otros recursos estáticos.
-│   ├── components/     # Componentes de interfaz de usuario reutilizables.
-│   ├── screens/        # Vistas o páginas principales de la aplicación.
-│   ├── hooks/          # Hooks personalizados para lógica reutilizable.
-│   ├── http/           # Servicios para la comunicación con el backend.
-│   ├── routes/          # Define las rutas de navegación de la aplicación.
-│   ├── store/           # Contiene la lógica de manejo de estado.
-│   ├── types/           # Define las interfaces y tipos de datos utilizados en la aplicación.
-│   ├── ...
-├── package.json      # Información sobre las dependencias y scripts del proyecto.
-├── ...
+src/
+  assets/         # Contiene imágenes y otros recursos estáticos.
+  components/     # Componentes de interfaz de usuario reutilizables.
+  screens/        # Vistas o páginas principales de la aplicación.
+  hooks/          # Hooks personalizados para lógica reutilizable.
+  http/           # Servicios para la comunicación con el backend.
+  routes/          # Define las rutas de navegación de la aplicación.
+  store/           # Contiene la lógica de manejo de estado.
+  types/           # Define las interfaces y tipos de datos utilizados en la aplicación.
+...
+package.json      # Información sobre las dependencias y scripts del proyecto.
+...
 
 ## Instalación y configuración
 
