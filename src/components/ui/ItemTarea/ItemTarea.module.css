@@ -10,6 +10,16 @@
     padding: 0 2rem;
 }
 
+.tareaVencida {
+    border: 2px solid red;
+    border-radius: 8px;
+}
+
+.textoVencimiento{
+    font-size: 0.7em;
+    color: red;
+}
+
 .itemTareaPrincipal{
     display: flex;
     align-items: center;

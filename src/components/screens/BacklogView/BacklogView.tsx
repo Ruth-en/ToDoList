@@ -8,10 +8,9 @@ export const BacklogView = () => {
         <div className={styles.containerBacklog}>
             <Header />
             <main className={styles.containerMain}>
-            <Navegacion />
-            <ListTareasBacklog />
+                <Navegacion />
+                <ListTareasBacklog />
             </main>
-            
         </div>
     )
 }

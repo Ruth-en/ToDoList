@@ -28,6 +28,7 @@ export const ItemTarea: FC<ItemTarea> = ({
     const [openModalEdit, setOpenModalEdit] = useState(false);
     const [selectedTarea, setSelectedTarea] = useState<ITarea | null>(null);
 
+
     const { eliminarTarea, modificarTarea } = useTareas();
     const { añadirTareaAlBacklog, quitarTareaDelBacklog } = useBacklog()
     const { addTareaAlSprint, removeTareaDelSprint } = useSprints();
@@ -61,7 +62,6 @@ export const ItemTarea: FC<ItemTarea> = ({
 
         const idTarea = tarea._id;
         if (confirm.isConfirmed && idTarea) {
-
             await quitarTareaDelBacklog(idTarea);
             await eliminarTarea(idTarea);
             Swal.fire("¡Eliminado!", "La tarea ha sido eliminada 🗑️", "success");
@@ -114,38 +114,58 @@ export const ItemTarea: FC<ItemTarea> = ({
         };
 
         modificarTarea(tareaActualizada);
-    }
+    };
+
+    const vencido = (fechaLimite: string): boolean => {
+        const hoy = new Date();
+        const fecha = new Date(fechaLimite);
+        const diffTime = fecha.getTime() - hoy.getTime();
+        const diffDays = diffTime / (1000 * 60 * 60 * 24);
+        return diffDays <= 0;
+    };
+
+
+
 
     return (
-        <div className={style.ContainerItemTarea}>
+        <div className={`${style.ContainerItemTarea} ${vencido(tarea.fechaLimite) ? style.tareaVencida : ''}`}>
             <div className={style.itemTareaPrincipal}>
                 <div className={style.itemTareaInfo}>
                     <h4>{tarea.titulo}</h4>
                     <p>FL:{tarea.fechaLimite}</p>
-                </div>
 
-                <div className={style.buttonsAndSelect}>
-                    {sprints && (
-                        <div className={style.sendSprint}>
-                            <select onChange={handleSelectSprint} value={selectedSprint || ''}>
-                                <option value="">Seleccionar Sprint</option>
-                                {sprints.map((sp) => (<option key={sp._id} value={sp._id}>{sp.nombre}</option>))}
-                            </select>
-                            <button className={style.sendButton}
-                                onClick={handleEnviarSprint}
-                                disabled={!selectedSprint}
-                            >
-                                Enviar
-                            </button>
+                </div>
+                {vencido(tarea.fechaLimite) ?
+                    <>
+                        <p className={style.textoVencimiento} >* Tarea vencida</p>
+                    </>
+                    :
+                    <>
+                        <div className={style.buttonsAndSelect}>
+                            {sprints && (
+                                <div className={style.sendSprint}>
+                                    <select onChange={handleSelectSprint} value={selectedSprint || ''}>
+                                        <option value="">Seleccionar Sprint</option>
+                                        {sprints.map((sp) => (<option key={sp._id} value={sp._id}>{sp.nombre}</option>))}
+                                    </select>
+                                    <button className={style.sendButton}
+                                        onClick={handleEnviarSprint}
+                                        disabled={!selectedSprint}
+                                    >
+                                        Enviar
+                                    </button>
+                                </div>
+                            )}
                         </div>
-
-                    )}
-                </div>
+                    </>
+                }
                 <div className={style.buttonsViewEditDelete}>
                     <button onClick={() => handleOpenModalVer(tarea)} style={{ backgroundColor: "#6BB0FF", color: "white" }}><IoEyeSharp /></button>
                     <button onClick={() => handleOpenModalEdit(tarea)} style={{ backgroundColor: "#85C86D", color: "white" }}><FaPen /></button>
                     <button onClick={() => handleEliminarTarea(tarea)} style={{ backgroundColor: "#FF6B6B", color: "white" }}><FaTrashAlt /></button>
                 </div>
+
+
             </div>
 
             {sprintId && (
